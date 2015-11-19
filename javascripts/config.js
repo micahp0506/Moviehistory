@@ -17,3 +17,14 @@ require.config({
     }
   }
 });
+
+require(
+  ["dependencies", "findMovie"], 
+  function(_$_, findMovie) {
+    
+
+    findMovie.findMovie();
+
+
+
+  });
