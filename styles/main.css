@@ -1,3 +1,43 @@
 
+/*Notice how there are no graphics in this HTML? They'll be added with CSS. We're just using the HTML to create the framework that the widget works from. Now it's time to start adding CSS.*/
+.rate_widget {
+    border:     1px solid #CCC;
+    overflow:   visible;
+    padding:    10px;
+    position:   relative;
+    width:      180px;
+    height:     32px;
+}
+.ratings_stars {
+    background: url(../image/star_empty.png) no-repeat;
+    float:      left;
+    height:     28px;
+    padding:    2px;
+    width:      32px;
+}
+.ratings_vote {
+    background: url(../image/star_full.png) no-repeat;
+}
+.ratings_over {
+    background: url(../image/star_highlight.png) no-repeat;
+}
+/*This first part of the CSS accomplishes a few things:
+Gives the default 'empty' start to each star location
+Sets up classes for filled in stars, and highlighted stars
+Defines and styles the stars' container.
+You can either use the graphics provided in the download, or make your own. There needs to be a graphic for each of the three states: empty, full, and highlighted.
+Next we add a little more CSS to position the total votes box, and center the widgets so the page matches the graphic at the start of this section.*/
+.total_votes {
+    background: #eaeaea;
+    top: 58px;
+    left: 0;
+    padding: 5px;
+    position:   absolute;  
+} 
+.movie_choice {
+    font: 10px verdana, sans-serif;
+    margin: 0 auto 40px auto;
+    width: 180px;
+}
 
 /*# sourceMappingURL=main.css.map */

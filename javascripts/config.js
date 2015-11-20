@@ -17,3 +17,8 @@ require.config({
     }
   }
 });
+
+require(
+  ["dependencies"],
+  function(dependencies) {
+});
