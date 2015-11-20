@@ -3,4 +3,5 @@ define(function(require) {
   var b = require("bootstrap");
   var h = require("hbs");
   var fb = require("firebase");
+  
 });

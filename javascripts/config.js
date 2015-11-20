@@ -4,6 +4,7 @@ require.config({
     'jquery': '../lib/bower_components/jquery/dist/jquery.min',
     'lodash': '../lib/bower_components/lodash/lodash.min',
     'hbs': '../lib/bower_components/require-handlebars-plugin/hbs',
+
     'firebase': '../lib/bower_components/firebase/firebase',
     'q': '../lib/bower_components/q/q',
     'bootstrap': '../lib/bower_components/bootstrap/dist/js/bootstrap.min',
@@ -19,6 +20,14 @@ require.config({
 });
 
 require(
-  ["dependencies"],
-  function(dependencies) {
-});
+  ["dependencies", "findMovie", "splashview", "hbs!../templates/splashview"], 
+  function(_$_, findMovie, splashview, splashViewTemplate) {
+    
+
+    findMovie.findMovie();
+    splashview.splashViewDisplay();
+
+
+   })
+
+
