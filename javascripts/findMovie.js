@@ -34,7 +34,7 @@ define(function (require) {
 			    .done(function(posterData) {
 					console.log(posterData);
 					var poster = posterData["Poster"];
-					console.log(poster)
+					console.log(poster);
 			    	require(["hbs!../templates/newMovies"], function(posterTemplate) {
 	  			 
 	  			 	$("#content").html(posterTemplate(posterData));
