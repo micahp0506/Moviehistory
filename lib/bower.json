@@ -5,6 +5,7 @@
   "authors": [
     "mdhays <mdhays1995@gmail.com>"
   ],
+
   "license": "MIT",
   "ignore": [
     "**/.*",
