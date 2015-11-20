@@ -8,7 +8,7 @@ return {
         $("#content").html(splashView(data));
       });
 
-      $("#nav-bar").hide();
+      // $("#nav-bar").hide();
     }
   };
 });
