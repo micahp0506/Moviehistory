@@ -1,5 +1,10 @@
-body {
-  font: 100% Helvetica, sans-serif;
-  color: #333; }
+form {
+  border: solid;
+  padding-left: 100px;
+  display: block;
+  margin-top: auto; }
+
+.input-group {
+  padding-top: 10px; }
 
 /*# sourceMappingURL=main.css.map */
