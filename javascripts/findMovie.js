@@ -21,20 +21,32 @@ define(function (require) {
 			      dataType: "json"
 			    })
 			    .done(function(titleData) {
-			    	require()
-
+			    	
+			    	var idNum = titleData["imdbID"];
+			    	console.log(titleData);
+			    	console.log(idNum)
+			    	$.ajax({
+				  type: "GET",	
+			      url: "http://img.omdbapi.com/?i=" + idNum + "&apikey=7c212437",
+			      dataType: "json"
+			    	})
+			    })	
+			    .done(function(posterData) {
+					console.log(posterData);
+					var poster = posterData["Poster"];
+					console.log(poster)
 			    	require(["hbs!../templates/newMovies"], function(posterTemplate) {
 	  			 
-	  			 	$("#content").html(posterTemplate(titleData));
+	  			 	$("#content").html(posterTemplate(posterData));
 	  			 
 	  			 	});
-			    	console.log(titleData);
+			    	
 
 
 			      
 			    })
 			    .fail(function(xhr, status, error) {
-			      // Reject the promise
+			      
 			      //end of ajax
 			      });
 
