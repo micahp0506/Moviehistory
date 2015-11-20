@@ -13,12 +13,25 @@ define(function (require) {
 				//need to get the value of move title
 				var title = $("#new-movie").val();
 				console.log("title", title);
-				//search the data base for the title
+
+				//search the api for the title
 				$.ajax({
-			      url: "http://img.omdbapi.com/?apikey=[yourkey]&"
+				  type: "GET",	
+			      url: "http://www.omdbapi.com/?" + "t=" + title + "&y=&plot=shorta&r=json",
+			      dataType: "json"
 			    })
-			    .done(function(response) {
-			      // Resolve the promise
+			    .done(function(titleData) {
+			    	require();
+
+			    	require(["hbs!../templates/newMovies"], function(posterTemplate) {
+	  			 
+	  			 	$("#content").html(posterTemplate(titleData));
+	  			 
+	  			 	});
+			    	console.log(titleData);
+
+
+			      
 			    })
 			    .fail(function(xhr, status, error) {
 			      // Reject the promise

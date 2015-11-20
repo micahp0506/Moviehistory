@@ -1,5 +1,4 @@
-
-define(["jquery"], function($) {
+define(function(require) {
 return {
     splashViewDisplay: function(data) {
       require(['hbs!../templates/splashview'], function (splashView){
@@ -8,6 +7,8 @@ return {
         //insert html into dom
         $("#content").html(splashView(data));
       });
+
+      // $("#nav-bar").hide();
     }
   };
 });

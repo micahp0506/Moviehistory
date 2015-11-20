@@ -19,13 +19,17 @@ require.config({
   }
 });
 
-require(["dependencies", "findMovie", "splashview", "hbs!../templates/splashview"], 
-  function(_$_, findMovie, splashview, splashViewTemplate) {
+
+require(
+
+  ["dependencies", "splashview", "hbs!../templates/splashview", "findMovie"], 
+  function(_$_,  splashview, splashViewTemplate, findMovie) {
+
     
 
-    findMovie.findMovie();
     splashview.splashViewDisplay();
 
+    findMovie.findMovie();
 
   });
 
