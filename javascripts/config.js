@@ -18,3 +18,5 @@ require(
 function(_$_, splashview, splashViewTemplate) {
   splashview.splashViewDisplay();
 });
+
+
