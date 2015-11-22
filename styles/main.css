@@ -1,40 +1,10 @@
 form {
-
   border: solid;
-  padding-left: 50px;
-
+  padding-left: 100px;
   display: block;
   margin-top: auto; }
 
 .input-group {
   padding-top: 10px; }
 
-/*This first part of the CSS accomplishes a few things:
-Gives the default 'empty' start to each star location
-Sets up classes for filled in stars, and highlighted stars
-Defines and styles the stars' container.*/
-/*http://code.tutsplus.com/tutorials/building-a-5-star-rating-system-with-jquery-ajax-and-php--net-11541*/
-  .rate_widget {
-    border:     1px solid #CCC;
-    overflow:   visible;
-    padding:    10px;
-    position:   relative;
-    width:      180px;
-    height:     32px;
-}
-.ratings_stars {
-    background: url(/image/star_empty.png) no-repeat;
-    float:      left;
-    height:     28px;
-    padding:    2px;
-    width:      32px;
-}
-.ratings_vote {
-    background: url(/image/star_full.png) no-repeat;
-}
-.ratings_over {
-    background: url(/image/star_highlight.png) no-repeat;
-}
-
 /*# sourceMappingURL=main.css.map */
-
