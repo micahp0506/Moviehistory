@@ -3,8 +3,6 @@ define(function (require) {
 	return {
 
 		findMovie: function () {
-
-
 			
 			$("#find-movie").on("click", function() {
 
@@ -24,48 +22,40 @@ define(function (require) {
 			    	
 			    	var idNum = titleData["imdbID"];
 			    	console.log(titleData);
-			    	console.log(idNum)
-			    	$.ajax({
-				  type: "GET",	
-			      url: "http://img.omdbapi.com/?i=" + idNum + "&apikey=7c212437",
-			      dataType: "json"
-			    	})
-			    })	
-			    .done(function(posterData) {
-					console.log(posterData);
-					var poster = posterData["Poster"];
-					console.log(poster);
+			    	console.log(idNum);
+			    	
+			    	//puts the img url into an object so it can be passed into the handlebars template
+					var posterObject= { poster : "http://img.omdbapi.com/?i=" + idNum + "&apikey=7c212437" };
+					console.log(posterObject)
 			    	require(["hbs!../templates/newMovies"], function(posterTemplate) {
 	  			 
-	  			 	$("#content").html(posterTemplate(posterData));
-	  			 
-	  			 	});
+	  			 	$("#content").prepend(posterTemplate(posterObject));
+	  			 });
 			    	
+	  			 
+	  			 	})	     
+			
+			    
+			});
+		}
+	};
 
 
-			      
-			    })
-			    .fail(function(xhr, status, error) {
-			      
-			      //end of ajax
-			      });
+
+
+	
 
 			    
-			    //end of event handler
-			    
-			    });
+
+
 				
 
 
-
-				
-			//end of FindMovie	
-			}
+			
 
 
 
-       //end of return
-		};
+  
 
 
 
