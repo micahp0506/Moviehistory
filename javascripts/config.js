@@ -19,10 +19,16 @@ require.config({
   }
 });
 
+<<<<<<< HEAD
 
 require(["dependencies", "splashview", "hbs!../templates/splashview", "findMovie", "authentication"], 
   function(_$_,  splashview, splashViewTemplate, findMovie, authentication) {
 
+=======
+require(
+  ["dependencies", "findMovie", "splashview", "hbs!../templates/splashview"], 
+  function(_$_, findMovie, splashview, splashViewTemplate) {
+>>>>>>> handlebarstw
     
 
     splashview.splashViewDisplay();
@@ -52,6 +58,7 @@ require(["dependencies", "splashview", "hbs!../templates/splashview", "findMovie
     });
 
 
-  });
+   })
+
 
 
