@@ -20,16 +20,37 @@ require.config({
 });
 
 
-require(
-
-  ["dependencies", "splashview", "hbs!../templates/splashview", "findMovie"], 
-  function(_$_,  splashview, splashViewTemplate, findMovie) {
+require(["dependencies", "splashview", "hbs!../templates/splashview", "findMovie", "authentication"], 
+  function(_$_,  splashview, splashViewTemplate, findMovie, authentication) {
 
     
 
     splashview.splashViewDisplay();
 
     findMovie.findMovie();
+
+
+
+
+     $("body").on("click", "#logInButton", function(){
+        console.log("Login clicked");
+        var userEmail = $("#userEmail").val();
+        console.log(userEmail);
+        var userPassword = $("#userPassword").val();
+        console.log(userPassword);
+        authentication.login(userEmail, userPassword);
+      
+    });
+     $("body").on("click", "#registerButton", function(){
+        console.log("Login clicked");
+        var userEmail = $("#userEmail").val();
+        console.log(userEmail);
+        var userPassword = $("#userPassword").val();
+        console.log(userPassword);
+        authentication.newUser(userEmail, userPassword);
+      
+    });
+
 
   });
 
