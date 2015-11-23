@@ -1,5 +1,5 @@
 define(function (require) {
-
+	var movieData;
 	return {
 
 		findMovie: function () {
@@ -17,6 +17,7 @@ define(function (require) {
 				  type: "GET",	
 			      url: "http://www.omdbapi.com/?" + "t=" + title + "&y=&plot=shorta&r=json",
 			      dataType: "json"
+			      
 			    })
 			    .done(function(titleData) {
 

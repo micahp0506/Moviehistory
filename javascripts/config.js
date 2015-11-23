@@ -21,8 +21,8 @@ require.config({
 
 
 
-require(["dependencies", "splashview", "hbs!../templates/splashview", "findMovie", "authentication", "newMovies"], 
-  function(_$_,  splashview, splashViewTemplate, findMovie, authentication, newMovies) {
+require(["dependencies", "splashview", "findMovie", "authentication", "newMovies"], 
+  function(_$_,  splashview, findMovie, authentication, newMovies) {
 
 
     
@@ -30,6 +30,8 @@ require(["dependencies", "splashview", "hbs!../templates/splashview", "findMovie
     splashview.splashViewDisplay();
 
     findMovie.findMovie();
+
+    newMovies.newMovie();
 
 
 

@@ -1,11 +1,9 @@
-requirejs(
-  ["dependencies"], 
-  function(dependencies) {
+define(function (require) {
 
 return {
 	newMovie: function(addMovie){
-		$("#body").on("click", "#heart", function (addMovie){
-
+		$("body").on("click", "#heart", function (){
+			console.log("hey");
 			var newMovie = {
 
 				title: addMovie.Title,
