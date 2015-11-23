@@ -4,7 +4,6 @@ require.config({
     'jquery': '../lib/bower_components/jquery/dist/jquery.min',
     'lodash': '../lib/bower_components/lodash/lodash.min',
     'hbs': '../lib/bower_components/require-handlebars-plugin/hbs',
-
     'firebase': '../lib/bower_components/firebase/firebase',
     'q': '../lib/bower_components/q/q',
     'bootstrap': '../lib/bower_components/bootstrap/dist/js/bootstrap.min',
@@ -18,22 +17,15 @@ require.config({
     }
   }
 });
-
-
-
-require(["dependencies", "splashview", "findMovie", "authentication", "newMovies"], 
+require(
+  ["dependencies", "splashview", "findMovie", "authentication", "newMovies"], 
   function(_$_,  splashview, findMovie, authentication, newMovies) {
-
-
     
-
     splashview.splashViewDisplay();
 
     findMovie.findMovie();
 
     newMovies.newMovie();
-
-
 
 
      $("body").on("click", "#logInButton", function(){
@@ -54,9 +46,4 @@ require(["dependencies", "splashview", "findMovie", "authentication", "newMovies
         authentication.newUser(userEmail, userPassword);
       
     });
-
-
-   }); //End
-
-
-
+  });
