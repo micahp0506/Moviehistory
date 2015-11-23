@@ -21,8 +21,8 @@ require.config({
 
 
 
-require(["dependencies", "splashview", "hbs!../templates/splashview", "findMovie", "authentication"], 
-  function(_$_,  splashview, splashViewTemplate, findMovie, authentication) {
+require(["dependencies", "splashview", "hbs!../templates/splashview", "findMovie", "authentication", "newMovies"], 
+  function(_$_,  splashview, splashViewTemplate, findMovie, authentication, newMovies) {
 
 
     
