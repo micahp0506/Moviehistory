@@ -21,7 +21,7 @@ define(function (require) {
 			    .done(function(titleData) {
 
 			    	
-			    	var idNum = titleData["imdbID"];
+			    	var idNum = titleData.imdbID;
 			    	console.log(titleData);
 			    	console.log(idNum);
 			    	
@@ -35,7 +35,7 @@ define(function (require) {
 	  			 });
 			    	
 	  			 
-	  			 	})	     
+	  			 	});	     
 			
 			    
 			});

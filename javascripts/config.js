@@ -54,7 +54,7 @@ require(["dependencies", "splashview", "hbs!../templates/splashview", "findMovie
     });
 
 
-   })
+   }); //End
 
 
 

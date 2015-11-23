@@ -8,9 +8,9 @@ return {
 
 			var newMovie = {
 
-				title: addMovie["Title"],
-				actors: addMovie["Actors"],
-				year: addMovie["Year"],
+				title: addMovie.Title,
+				actors: addMovie.Actors,
+				year: addMovie.Year,
 				watched: "false"
 
 
