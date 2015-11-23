@@ -1,17 +1,17 @@
 define(function (require) {
-
+	
+	var newMovieObject;
+	
 	return {
+		
 
 		findMovie: function () {
 			
 			$("#find-movie").on("click", function() {
-
 			console.log("find-movie working");
-
 				//need to get the value of move title
 				var title = $("#new-movie").val();
 				console.log("title", title);
-
 				//search the api for the title
 				$.ajax({
 				  type: "GET",	
@@ -29,53 +29,30 @@ define(function (require) {
 					console.log(posterObject)
 			    	require(["hbs!../templates/newMovies"], function(posterTemplate) {
 	  			 
-	  			 	$("#content").prepend(posterTemplate(posterObject));
-	  			 });
+	  			 		$("#content").prepend(posterTemplate(posterObject));
+	  			 	});
+			    	newMovieObject = titleData;
+			    	console.log(newMovieObject);
 			    	
 	  			 
 	  			 	})	     
 			
 			    
 			});
+		},
+		getMovie: function () {
+
+			return newMovieObject;
+			console.log(newMovieObject);
+
 		}
 	};
-
-
-
-
 	
-
 			    
-
-
 				
-
-
 			
-
-
-
   
-
-
-
-
 		
 	
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 //end of module
 });

@@ -1,9 +1,6 @@
 define(function(require) {
 	fb = require('firebase');
-
 	var authInfo = null;
-
-
 	var ref = new Firebase("https://mbt-movie-history.firebaseio.com");
 	return {
 	login: function (userEmail, userPassword) {
@@ -12,7 +9,6 @@ define(function(require) {
 		ref.authWithPassword({
 	email: userEmail,
 	password: userPassword
-
 	}, 
 	function (error, authData) {
   		if (error) {
@@ -23,12 +19,9 @@ define(function(require) {
     		$("#nav-bar").show();
   				}
 			});
-
 		},
-
 	newUser: function (userEmail, userPassword){
 		
-
 	ref.createUser({
   email: userEmail,
   password: userPassword
@@ -40,11 +33,8 @@ define(function(require) {
     
     $("#content").html("");
     $("#nav-bar").show();
-
   }
 });
 	}
-
-
 	}
 });
