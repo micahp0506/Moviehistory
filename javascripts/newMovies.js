@@ -11,8 +11,9 @@ return {
 
 	console.log();
 
-		var ref = new Firebase("https://mbt-movie-history.firebaseio.com/");
+		var ref = new Firebase("https://mbt-movie-history.firebaseio.com/users/");
 		var user = ref.getAuth();
+		var uid = user.uid;
 
 		$("body").on("click", "#heart", function (){
 			console.log("heart clicked");
@@ -25,10 +26,11 @@ return {
 				actors: newMovieObject["Actors"],
 				year: newMovieObject["Year"],
 				poster: newMovieObject["Poster"],
+				plot: newMovieObject["Plot"],
 				watched: "false"
 
 			};
-			ref.push({newMovie});
+			ref.child(uid).push({newMovie});
 			console.log(newMovie);
 			
 				//end of click function
