@@ -16,7 +16,7 @@ return {
 		$("body").on("click", "#heart", function (){
 			console.log("heart clicked");
 			var newMovieObject = getNewMovie.getMovie();
-			console.log(newMovieObject);
+			console.log("newMovieObject", newMovieObject);
 
 			var newMovie = {
 
@@ -28,8 +28,8 @@ return {
 				watched: "false"
 				// Use set method and define path
 			};
-			ref.child(uid).push({newMovie});
-			console.log(newMovie);
+			ref.child(uid).push(newMovie);
+			console.log("newMovie", newMovie);
 			
 				//end of click function
 			    });

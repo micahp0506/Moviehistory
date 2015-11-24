@@ -27,6 +27,11 @@ define(function (require) {
 		    })
 		    .done(function(titleData) {
 		    	
+		    	var ref = new Firebase("https://mbt-movie-history.firebaseio.com/users/" + userId);
+				var firebaseResults = ref.orderByChild("title").equalTo(title);
+
+
+
 		    	var idNum = titleData["imdbID"];
 		    	console.log(titleData);
 		    	console.log(idNum);
