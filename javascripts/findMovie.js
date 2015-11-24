@@ -39,9 +39,12 @@ define(function (require) {
 			    	
 	  			 
 	  			 	}); 
+			    $("#find-movie").val(" ");
 				};
+
 			    
-			});
+			});			
+				
 		},
 		getMovie: function () {
 

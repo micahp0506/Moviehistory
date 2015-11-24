@@ -3,6 +3,7 @@ define(function(require) {
 	var authInfo = null;
 	var ref = new Firebase("https://mbt-movie-history.firebaseio.com");
 	return {
+
 	login: function (userEmail, userPassword) {
 		
 		
@@ -20,6 +21,7 @@ define(function(require) {
   				}
 			});
 		},
+		
 	newUser: function (userEmail, userPassword){
 		
 		ref.createUser({
@@ -48,7 +50,7 @@ define(function(require) {
 		    var userExists = false;
 		    var uid = authData.uid;
 
-		    // 'https://mbt-movie-history.firebaseio.com/users/' + uid
+		 
 
 		    usersFirebase.once("value", function(dataSnapshot) {
 		    	dataSnapshot.forEach(function(childSnapshot) {
@@ -65,10 +67,10 @@ define(function(require) {
 			    }
 		    });
 	    
-	    $("#content").html("");
-	    $("#nav-bar").show();
-	  }
-	});
-		}
+	    		$("#content").html("");
+	    		$("#nav-bar").show();
+	  				}
+				});
+			}
 		};
 	});

@@ -28,7 +28,7 @@ return {
 				poster: newMovieObject["Poster"],
 				plot: newMovieObject["Plot"],
 				watched: "false"
-				// Use set method and define path
+				
 			};
 			ref.child(uid).push({newMovie});
 			console.log(newMovie);
