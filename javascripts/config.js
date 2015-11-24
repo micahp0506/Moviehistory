@@ -20,12 +20,13 @@ require.config({
 require(
   ["dependencies", "splashview", "findMovie", "authentication", "newMovies"], 
   function(_$_,  splashview, findMovie, authentication, newMovies) {
+ 
     
     splashview.splashViewDisplay();
 
     findMovie.findMovie();
 
-    newMovies.newMovie();
+    // newMovies.newMovie();
 
 
      $("body").on("click", "#logInButton", function(){

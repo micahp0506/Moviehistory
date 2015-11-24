@@ -1,14 +1,14 @@
 define(function(require) {
 	fb = require('firebase');
+	var newMovies = require("newMovies");
 	var authInfo = null;
 	var ref = new Firebase("https://mbt-movie-history.firebaseio.com");
 	return {
 	login: function (userEmail, userPassword) {
 		
-		
 		ref.authWithPassword({
-	email: userEmail,
-	password: userPassword
+		email: userEmail,
+		password: userPassword
 	}, 
 	function (error, authData) {
   		if (error) {
@@ -17,8 +17,9 @@ define(function(require) {
     		console.log("Authenticated successfully with payload:", authData);
     		$("#content").html("");
     		$("#nav-bar").show();
-  				}
-			});
+  			newMovies.newMovie();
+  		}
+		});
 		},
 	newUser: function (userEmail, userPassword){
 		

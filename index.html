@@ -21,51 +21,28 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="#">Movie History</a>
+      
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       
       <form class="navbar-form navbar-left" role="search">
-        <button type="button" class="btn btn-default" data-toggle="modal" data-target="#myModal">Find New Movies</button>
-        <button type="button" class="btn btn-default" id="search-my-movies">Search My Movies</button>
+        
+        <input type="text" id="find-movie" placeholder="Search movies...">
 
       </form>
       <ul class="nav navbar-nav navbar-right">
         <li><a href="#">Logout</a></li>
-   
       </ul>
+
+      <a href="">All<a> | <a href="">Unwatched<a> | <a href="">Watched<a> | <a href="">Favorites<a>
+
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
 </nav>
 
 
-<!-- Modal code -->
-<!-- Modal -->
-<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title" id="myModalLabel">Search For A Movie</h4>
-      </div>
-      <div class="modal-body">
-        <form>
-  <div class="form-group">
-    <label for="exampleInputEmail1">Enter Movie Title</label>
-    <input type="email" class="form-control" id="new-movie" placeholder="Movie">
-  </div>
-  
-</form>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary" id="find-movie">Search</button>
-      </div>
-    </div>
-  </div>
-</div>
 
 <div id="content"></div>
 
