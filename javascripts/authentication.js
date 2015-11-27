@@ -8,12 +8,13 @@ define(function(require) {
 		
 		
 		ref.authWithPassword({
-	email: userEmail,
-	password: userPassword
+		email: userEmail,
+		password: userPassword
 	}, 
 	function (error, authData) {
   		if (error) {
     		console.log("Login Failed!", error);
+
   		} else {
     		console.log("Authenticated successfully with payload:", authData);
     		$("#content").html("");
@@ -21,7 +22,7 @@ define(function(require) {
   				}
 			});
 		},
-		
+
 	newUser: function (userEmail, userPassword){
 		
 		ref.createUser({
@@ -66,7 +67,7 @@ define(function(require) {
 			    	});
 			    }
 		    });
-	    
+	    		
 	    		$("#content").html("");
 	    		$("#nav-bar").show();
 	  				}

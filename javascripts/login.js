@@ -7,6 +7,7 @@ define(function(require) {
 	  if (error) {
 	    console.log("Login Failed!", error);
 	  } else {
+	  	
 	    console.log("Authenticated successfully with payload:", authData);
 	  }
 	});
