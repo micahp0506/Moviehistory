@@ -5,7 +5,6 @@
   "authors": [
     "mdhays <mdhays1995@gmail.com>"
   ],
-
   "license": "MIT",
   "ignore": [
     "**/.*",
@@ -20,8 +19,11 @@
     "handlebars": "~4.0.4",
     "jquery": "~2.1.4",
     "lodash": "~3.10.1",
-    "q": "~2.0.2",
+    "q": "1.0.1",
     "require-handlebars-plugin": "~1.0.0",
     "requirejs": "~2.1.21"
+  },
+  "resolutions": {
+    "q": "~2.0.2"
   }
 }
