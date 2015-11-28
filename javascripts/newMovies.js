@@ -22,10 +22,11 @@ return {
 
 			var newMovie = {
 
-				title: newMovieObject["Title"],
-				actors: newMovieObject["Actors"],
-				year: newMovieObject["Year"],
-				poster: newMovieObject["Poster"],
+				title: newMovieObject.Title,
+				actors: newMovieObject.Actors,
+				year: newMovieObject.Year,
+				poster: newMovieObject.Poster,
+				plot: newMovieObject.Plot,
 				watched: "false"
 				// Use set method and define path
 			};

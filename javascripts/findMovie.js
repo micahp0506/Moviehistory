@@ -7,10 +7,13 @@ define(function (require) {
 
 		findMovie: function () {
 			
-			$("#find-movie").on("click", function() {
+			$("#find-movie").keyup(function (event) {
+				key = event.which;
+				console.log(event.key);
+				if ( key === 13) {
 			console.log("find-movie working");
 				//need to get the value of move title
-				var title = $("#new-movie").val();
+				var title = $("#find-movie").val();
 				console.log("title", title);
 				//search the api for the title
 				$.ajax({
@@ -20,7 +23,7 @@ define(function (require) {
 			    })
 			    .done(function(titleData) {
 			    	
-			    	var idNum = titleData["imdbID"];
+			    	var idNum = titleData.imdbID;
 			    	console.log(titleData);
 			    	console.log(idNum);
 			    	
@@ -36,7 +39,7 @@ define(function (require) {
 			    	
 	  			 
 	  			 	}); 
-			
+				}
 			    
 			});
 		},
