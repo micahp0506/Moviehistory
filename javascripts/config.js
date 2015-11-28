@@ -27,7 +27,7 @@ require(
 
     newMovies.newMovie();
 
-
+    // When login is clicked on, this grabs the email and password values and authenticates the user.
      $("body").on("click", "#logInButton", function(){
         console.log("Login clicked");
         var userEmail = $("#userEmail").val();
@@ -37,6 +37,7 @@ require(
         authentication.login(userEmail, userPassword);
       
     });
+     // When register is clicked, this grabs the email and password values, registers, and authenticates the user. 
      $("body").on("click", "#registerButton", function(){
         console.log("Login clicked");
         var userEmail = $("#userEmail").val();

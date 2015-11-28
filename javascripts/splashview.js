@@ -2,12 +2,10 @@ define(function(require) {
 return {
     splashViewDisplay: function(data) {
       require(['hbs!../templates/splashview'], function (splashView){
-        //jquery to grab the dom element where we want to put our songs
-        //use songTemplate on data to generate html
-        //insert html into dom
+        // Using jquery, we're telling our template to populate inside of the content div.
         $("#content").html(splashView(data));
       });
-
+        // This hides the nav-bar because it's not usable until user logs in.
       $("#nav-bar").hide();
     }
   };
