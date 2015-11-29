@@ -1,11 +1,10 @@
 {
-  "name": "template",
+  "name": "lib",
   "version": "0.0.0",
-  "homepage": "https://github.com/rsheldon3ayers/Steph-Dani-Baobby",
+  "homepage": "https://github.com/mdhays/Moviehistory",
   "authors": [
-    "Robert (Bobby) Ayers <rsheldon3ayers@gmail.com>"
+    "mdhays <mdhays1995@gmail.com>"
   ],
-  "description": "add yours here",
   "license": "MIT",
   "ignore": [
     "**/.*",
@@ -17,8 +16,14 @@
   "dependencies": {
     "bootstrap": "~3.3.5",
     "firebase": "~2.3.2",
+    "handlebars": "~4.0.4",
     "jquery": "~2.1.4",
+    "lodash": "~3.10.1",
+    "q": "1.0.1",
     "require-handlebars-plugin": "~1.0.0",
     "requirejs": "~2.1.21"
+  },
+  "resolutions": {
+    "q": "~2.0.2"
   }
 }

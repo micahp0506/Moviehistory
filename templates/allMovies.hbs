@@ -1,0 +1,16 @@
+{{#each this}}
+
+	<div class="col-xs-6 col-md-3" type="button" data-toggle="modal" data-target="#myModal">
+    <a href="#" class="thumbnail">
+	  <span class="glyphicon glyphicon-remove delete" id={{@key}}  aria-hidden="true"></span>	
+      <img src="http://img.omdbapi.com/?i={{ id }}&apikey=7c212437">
+      
+      <input class="btn btn-default" type="button" value="Watched">
+      
+    </a>
+  </div>
+  
+    
+</div>	
+</div>
+{{/each}}

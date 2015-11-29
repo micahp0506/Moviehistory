@@ -17,3 +17,35 @@ require.config({
     }
   }
 });
+require(
+  ["dependencies", "splashview", "findMovie", "authentication", "newMovies", "deleteMovie"], 
+  function(_$_,  splashview, findMovie, authentication, newMovies, deleteMovies) {
+    
+    splashview.splashViewDisplay();
+
+    findMovie.findMovie();
+
+    newMovies.newMovie();
+
+  
+
+
+     $("body").on("click", "#logInButton", function(){
+        console.log("Login clicked");
+        var userEmail = $("#userEmail").val();
+        console.log(userEmail);
+        var userPassword = $("#userPassword").val();
+        console.log(userPassword);
+        authentication.login(userEmail, userPassword);
+      
+    });
+     $("body").on("click", "#registerButton", function(){
+        console.log("Login clicked");
+        var userEmail = $("#userEmail").val();
+        console.log(userEmail);
+        var userPassword = $("#userPassword").val();
+        console.log(userPassword);
+        authentication.newUser(userEmail, userPassword);
+      
+    });
+  });
