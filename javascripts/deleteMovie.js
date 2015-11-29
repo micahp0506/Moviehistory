@@ -14,8 +14,28 @@ define(function (require) {
 			var movieKey = $(this).attr("id");
 			ref = ref.child(movieKey);
 			ref.remove();
+
+			var ref = new Firebase("https://mbt-movie-history.firebaseio.com/users/");
+			console.log("ref", ref);
+			var user = ref.getAuth();
+			var uid = user.uid;
+			ref = ref.child(uid);
+
+			ref.on("value", function(snapshot){
+
+				var snapshotObject = snapshot.val();
+				console.log(snapshotObject);
+
+				require(["hbs!../templates/allMovies"], function(posterTemplate) {
+	  			 
+	  			 		$("#content").html(posterTemplate(snapshotObject));
+
+	  			 			})
+			})
 			
   				});
+
+
 
 //end of module
 });

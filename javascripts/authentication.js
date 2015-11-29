@@ -32,7 +32,7 @@ define(function(require) {
 
 				require(["hbs!../templates/allMovies"], function(posterTemplate) {
 	  			 
-	  			 		$("#content").append(posterTemplate(snapshotObject));
+	  			 		$("#content").html(posterTemplate(snapshotObject));
 
 	  			 			})
 			})
