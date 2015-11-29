@@ -25,7 +25,8 @@ define(function (require) {
 			    	var userID = user.uid;
 			    	console.log("userID", userID);
 			    	ref = ref.child(userID);
-			    	console.log("title", title);
+			    	console.log("ref", ref);
+			    	
 
 			    	var firebaseResults = ref.orderByChild("title").equalTo(title);
 					console.log(firebaseResults)
@@ -97,7 +98,7 @@ define(function (require) {
 						//end of function findStuff()
 						};
 			    	//end of "enter-key" if statement
-			    	$("#find-movie").html(" ");
+			    	$("#find-movie").val("");
 			    	}; 
 			    //end of search bar event listener
 

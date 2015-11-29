@@ -18,14 +18,16 @@ require.config({
   }
 });
 require(
-  ["dependencies", "splashview", "findMovie", "authentication", "newMovies"], 
-  function(_$_,  splashview, findMovie, authentication, newMovies) {
+  ["dependencies", "splashview", "findMovie", "authentication", "newMovies", "deleteMovie"], 
+  function(_$_,  splashview, findMovie, authentication, newMovies, deleteMovies) {
     
     splashview.splashViewDisplay();
 
     findMovie.findMovie();
 
     newMovies.newMovie();
+
+  
 
 
      $("body").on("click", "#logInButton", function(){
