@@ -2,23 +2,24 @@ form {
   border: solid;
   padding-left: 100px;
   display: block;
-  margin-top: auto; }
+  margin-top: auto;
+  border-color: white; }
 
 .input-group {
   padding-top: 10px; }
+
 
  .rating {
     float:right;
 }
 
-/* :not(:checked) is a filter, so that browsers that don’t support :checked don’t 
-   follow these rules. Every browser that supports :checked also supports :not(), so
-   it doesn’t make the test unnecessarily selective */
-.rating:not(:checked) > input {
-    position:absolute;
-    top:-9999px;
-    clip:rect(0,0,0,0);
-}
+body {
+  background-image: url(http://40.media.tumblr.com/3fed212a348d04765501d726c73aebd8/tumblr_nmwipfYIsR1u1udiho1_1280.jpg); }
+
+
+h1 {
+  color: white; }
+
 
 .rating:not(:checked) > label {
     float:right;
@@ -37,25 +38,26 @@ form {
     content: ' ★ ';
 }
 
-.rating > input:checked ~ label {
-    color: #f70;
-    text-shadow:1px 1px #c60, 2px 2px #940, .1em .1em .2em rgba(0,0,0,.5);
-}
+#watched, #favorite, #unwatched, #all, #logInButton, #registerButton {
+  background-color: black;
+  color: white;
+  opacity: 95%; }
 
-.rating:not(:checked) > label:hover,
-.rating:not(:checked) > label:hover ~ label {
-    color: gold;
-    text-shadow:1px 1px goldenrod, 2px 2px #B57340, .1em .1em .2em rgba(0,0,0,.5);
-}
+.thumbnail {
+  background-color: black;
+  opacity: 90%; }
 
-.rating > input:checked + label:hover,
-.rating > input:checked + label:hover ~ label,
-.rating > input:checked ~ label:hover,
-.rating > input:checked ~ label:hover ~ label,
-.rating > label:hover ~ input:checked ~ label {
-    color: #ea0;
-    text-shadow:1px 1px goldenrod, 2px 2px #B57340, .1em .1em .2em rgba(0,0,0,.5);
-}
+
+#nav-bar {
+  background-color: black; }
+
+#logOut {
+  color: white; }
+
+#find-movie, #userEmail, #userPassword {
+  background-color: black;
+  color: white; }
+
 
 .rating > label:active {
     position:relative;
@@ -76,5 +78,13 @@ margin-bottom: 5px;
 
   float: right;
 }
+
+.text-right {
+  color: white; }
+
+.modal-content {
+  background-color: black;
+  color: white; }
+
 
 /*# sourceMappingURL=main.css.map */

@@ -1,12 +1,12 @@
 define(function(require) {
 	fb = require('firebase');
 	var authInfo = null;
-	var ref = new Firebase("https://mbt-movie-history.firebaseio.com");
+	var ref = new Firebase("https://moviehistorynew.firebaseio.com");
 	return {
 	login: function (userEmail, userPassword) {
 		
 		
-		ref.authWithPassword({
+	ref.authWithPassword({
 	email: userEmail,
 	password: userPassword
 	}, 
@@ -20,7 +20,7 @@ define(function(require) {
     		$("#nav-links").show();
     		
     		//fetch data from firebase based on login info 
-    		var ref = new Firebase("https://mbt-movie-history.firebaseio.com/users/");
+    		var ref = new Firebase("https://moviehistorynew.firebaseio.com/users/");
 			console.log("ref", ref);
 			var user = ref.getAuth();
 			var uid = user.uid;

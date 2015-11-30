@@ -15,7 +15,7 @@ return {
 
 		$("body").on("click", ".add-button", function (){
 		
-		var ref = new Firebase("https://mbt-movie-history.firebaseio.com/users/");
+		var ref = new Firebase("https://moviehistorynew.firebaseio.com/users/");
 		console.log("ref", ref);
 		var user = ref.getAuth();
 

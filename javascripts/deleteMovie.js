@@ -5,7 +5,7 @@ define(function (require) {
 
 
 			$("body").on("click", ".delete", function() {
-			ref = new Firebase("https://mbt-movie-history.firebaseio.com/users/");
+			ref = new Firebase("https://moviehistorynew.firebaseio.com/users/");
 			
 			var user = ref.getAuth();
 			var userID = user.uid;
@@ -16,7 +16,7 @@ define(function (require) {
 			console.log("delte ref", ref);
 			ref.remove();
 
-			var ref = new Firebase("https://mbt-movie-history.firebaseio.com/users/");
+			var ref = new Firebase("https://moviehistorynew.firebaseio.com/users/");
 			console.log("ref", ref);
 			var user = ref.getAuth();
 			var uid = user.uid;

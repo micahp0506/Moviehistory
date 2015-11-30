@@ -7,7 +7,7 @@ define(function (require) {
 	$("body").on("click", ".movie-info", function(){
 
 			console.log("clicked the poster");
-			ref = new Firebase("https://mbt-movie-history.firebaseio.com/users/")
+			ref = new Firebase("https://moviehistorynew.firebaseio.com/users/")
 			
 			var user = ref.getAuth();
 			var userID = user.uid;
