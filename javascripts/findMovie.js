@@ -53,6 +53,7 @@ define(function (require) {
                  
                         $("#content").html(posterTemplate(snapshotObject));
 
+
                             });
                 
 
@@ -121,9 +122,18 @@ define(function (require) {
             },          
                 
         
-        getMovie: function () {
+        getMovie: function (title) {
 
-            return newMovieObject;
+          $.ajax({
+                  type: "GET",  
+                  url: "http://www.omdbapi.com/?s=" + title + "&y=&plot=shorta&r=json",
+                  dataType: "json"
+                })
+                .done(function(titleData){
+
+                    return titleData;
+
+                })
             
 
         }

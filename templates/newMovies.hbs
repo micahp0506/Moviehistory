@@ -1,14 +1,14 @@
 {{#each searchMovie}}
 	 {{#if posterUrl}}
 	<div class="col-xs-6 col-md-3 ">
-	    <a href="#" class="thumbnail movie-info" id={{@key}} data-toggle="modal" data-target="#posterModal">
+	    <a href="#" class="thumbnail movie-info" data-toggle="modal" data-target="#posterModal">
 	     
 	      <img src= {{ posterUrl }}>
 	      
 	    </a>
 	    
 	    
-	    <button class="btn btn-default add-button" type="submit" id="heart">Add</button>
+	    <button class="btn btn-default add-button" type="submit" id={{{Title}}}>Add</button>
 	</div>
 	{{/if}}
 	

@@ -13,7 +13,7 @@ return {
 
 		
 
-		$("body").on("click", "#heart", function (){
+		$("body").on("click", ".add-button", function (){
 		
 		var ref = new Firebase("https://mbt-movie-history.firebaseio.com/users/");
 		console.log("ref", ref);
@@ -22,7 +22,9 @@ return {
 		var uid = user.uid;
 		ref = ref.child(uid);
 			console.log("heart clicked");
-			var newMovieObject = getNewMovie.getMovie();
+			var title = $(this).attr("id");
+			console.log(this);
+			var newMovieObject = getNewMovie.getMovie(title);
 			console.log(newMovieObject);
 
 			var newMovie = {
