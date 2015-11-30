@@ -3,8 +3,50 @@ form {
 	padding-left: 100px;
 	display: block;
 	margin-top: auto;
+	border-color: white;
 }
 
 .input-group {
 	padding-top: 10px;
+}
+
+body {
+background-image: url(http://40.media.tumblr.com/3fed212a348d04765501d726c73aebd8/tumblr_nmwipfYIsR1u1udiho1_1280.jpg);
+}
+
+h1 {
+	color: white;
+}
+
+#watched, #favorite, #unwatched, #all, #logInButton, #registerButton {
+	background-color: black;
+	color: white;
+	opacity: 95%;
+}
+
+.thumbnail {
+	background-color: black;
+	opacity: 90%;
+}
+
+#nav-bar {
+	background-color: black;
+}
+
+#logOut {
+	color: white;
+}
+
+#find-movie, #userEmail, #userPassword {
+	background-color: black;
+	color: white;
+}
+
+.text-right {
+	color: white;
+}
+
+.modal-content {
+	background-color: black;
+	color: white;
 }
