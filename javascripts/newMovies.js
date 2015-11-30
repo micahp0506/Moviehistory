@@ -11,15 +11,16 @@ return {
 
 	console.log();
 
+		
+
+		$("body").on("click", "#heart", function (){
+		
 		var ref = new Firebase("https://mbt-movie-history.firebaseio.com/users/");
 		console.log("ref", ref);
 		var user = ref.getAuth();
 
 		var uid = user.uid;
 		ref = ref.child(uid);
-
-		$("body").on("click", "#heart", function (){
-			
 			console.log("heart clicked");
 			var newMovieObject = getNewMovie.getMovie();
 			console.log(newMovieObject);
@@ -32,7 +33,8 @@ return {
 				poster: newMovieObject["Poster"],
 				plot: newMovieObject["Plot"],
 				id: newMovieObject["imdbID"],
-				watched: "false"
+				unwatched: "true"
+				
 				
 			};
 

@@ -49,9 +49,9 @@ define(function (require) {
 
 					
 					
-					require(["hbs!../templates/newMovies"], function(posterTemplate) {
+					require(["hbs!../templates/foundWatched"], function(posterTemplate) {
 	  			 
-	  			 		$("#content").append(posterTemplate(snapshotObject));
+	  			 		$("#content").html(posterTemplate(snapshotObject));
 
 	  			 			})
 				
@@ -92,7 +92,7 @@ define(function (require) {
 
 			    	require(["hbs!../templates/newMovies"], function(posterTemplate) {
 	  			 
-	  			 		$("#content").append(posterTemplate(posterObject));
+	  			 		$("#content").html(posterTemplate(posterObject));
 	  			 				});
 							});
 						//end of function findStuff()

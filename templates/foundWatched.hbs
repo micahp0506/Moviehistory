@@ -1,8 +1,5 @@
-
-	
-{{#each this}}
-	{{#if watched}}
-	<div class="col-xs-6 col-md-3 movie-info" id={{@key}} data-toggle="modal" data-target="#posterModal">
+{{#if watched}}
+	<div class="col-xs-6 col-md-3" data-toggle="modal" data-target="#posterModal">
     <a href="#" class="thumbnail">
     <span class="glyphicon glyphicon-remove delete" id={{@key}}  aria-hidden="true"></span>
    <img src= "http://img.omdbapi.com/?i={{ id }}&apikey=7c212437">
@@ -25,9 +22,8 @@
 
 
 
-
 	{{else}}
-	<div class="col-xs-6 col-md-3 movie-info" id={{@key}} data-toggle="modal" data-target="#posterModal">
+	<div class="col-xs-6 col-md-3" type="button" id={{@key}} data-toggle="modal" data-target="#posterModal">
     <a href="#" class="thumbnail">
 	  <span class="glyphicon glyphicon-remove delete" id={{@key}}  aria-hidden="true"></span>	
       <img src="http://img.omdbapi.com/?i={{ id }}&apikey=7c212437">
@@ -50,4 +46,3 @@
     
 </div>	
 </div>
-{{/each}}

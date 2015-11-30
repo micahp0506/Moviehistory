@@ -1,3 +1,29 @@
-{{#each users}}
-<div>{{ title }}</div>
+{{#each this}}
+
+	
+    {{#if watched }}
+   <div class="col-xs-6 col-md-3 movie-info" id={{@key}} data-toggle="modal" data-target="#posterModal">
+    <a href="#" class="thumbnail">
+    <span class="glyphicon glyphicon-remove delete" id={{@key}}  aria-hidden="true"></span>
+   <img src= "http://img.omdbapi.com/?i={{ id }}&apikey=7c212437">
+  
+ 	<div class="rating">
+   
+    <input type="radio" id="star5" name="rating" value="5"><label for="star5">5 stars</label>
+    <input type="radio" id="star4" name="rating" value="4"><label for="star4">4 stars</label>
+    <input type="radio" id="star3" name="rating" value="3"><label for="star3">3 stars</label>
+    <input type="radio" id="star2" name="rating" value="2"><label for="star2">2 stars</label>
+    <input type="radio" id="star1" name="rating" value="1"><label for="star1">1 star</label>
+	</div>
+ </a>
+</div>
+
+
+	{{/if}}
+    
+{{/each}}
+   
+     
+     
+
 

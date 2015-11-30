@@ -17,6 +17,7 @@ define(function(require) {
     		console.log("Authenticated successfully with payload:", authData);
     		$("#content").html("");
     		$("#nav-bar").show();
+    		$("#nav-links").show();
     		
     		//fetch data from firebase based on login info 
     		var ref = new Firebase("https://mbt-movie-history.firebaseio.com/users/");
@@ -24,8 +25,10 @@ define(function(require) {
 			var user = ref.getAuth();
 			var uid = user.uid;
 			ref = ref.child(uid);
+			
+			
 
-			ref.on("value", function(snapshot){
+			ref.once("value", function(snapshot){
 
 				var snapshotObject = snapshot.val();
 				console.log(snapshotObject);
@@ -89,6 +92,14 @@ define(function(require) {
 	    		$("#nav-bar").show();
 	  				}
 				});
-			}
-		};
+			},
+			logOut: function () {
+                // Logging out
+                 
+                 console.log("did it click");
+                  ref.unauth();
+                  
+                  console.log("you have logged out");
+		}
+	};
 	});

@@ -12,22 +12,7 @@
 
 <body>
 
- <!-- Click poster modal -->
-  <div class="modal fade" id="posterModal">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h4 class="modal-title">{{ title }}</h4>
-        </div>
-        <div id="modal-body" class="modal-body">
-        
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        </div>
-      </div><!-- /.modal-content -->
-    </div><!-- /.modal-dialog -->
-  </div><!-- /.modal -->
+ 
     
   </div>
 <nav class="navbar navbar-inverse" id="nav-bar">
@@ -52,17 +37,39 @@
 
       </form>
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="#">Logout</a></li>
+        <li><a href="#" id="logOut">Logout</a></li>
    
       </ul>
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
 </nav>
 
+<div id="nav-links"><a class="btn btn-default" href="#" role="button" id="all">All</a>
+  <a class="btn btn-default" href="#" role="button" id="watched">Watched</a>
+  <a class="btn btn-default" href="#" role="button" id="unwatched">Unwatched</a>
+  <a class="btn btn-default" href="#" role="button" id="favorites">Favorites</a></div>
 
+<div id="content">
 
-<div id="content"></div>
+  
+</div>
 
+<!-- Click poster modal -->
+  <div class="modal fade" id="posterModal">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title">Movie Info</h4>
+        </div>
+        <div id="modal-body" class="modal-body">
+        
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+  </div><!-- /.modal -->
 
 
   

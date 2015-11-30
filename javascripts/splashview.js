@@ -9,6 +9,7 @@ return {
       });
 
       $("#nav-bar").hide();
+      $("#nav-links").hide();
     }
   };
 });

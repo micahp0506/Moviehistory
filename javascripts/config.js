@@ -18,8 +18,8 @@ require.config({
   }
 });
 require(
-  ["dependencies", "splashview", "findMovie", "authentication", "newMovies", "deleteMovie"], 
-  function(_$_,  splashview, findMovie, authentication, newMovies, deleteMovies) {
+  ["dependencies", "splashview", "findMovie", "authentication", "newMovies", "deleteMovie","addWatched", "watchedView", "allView", "unwatchedView", "modalView"], 
+  function(_$_,  splashview, findMovie, authentication, newMovies, deleteMovies, addWatched, watchedView, allView, unwatchedView, modalView) {
     
     splashview.splashViewDisplay();
 
@@ -48,4 +48,10 @@ require(
         authentication.newUser(userEmail, userPassword);
       
     });
+     $("body").on('click', "#logOut", function() {
+            
+            authentication.logOut();
+            splashview.splashViewDisplay();
+
+   });
   });

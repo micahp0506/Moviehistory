@@ -1,0 +1,22 @@
+{{#each this}}
+
+	
+    {{#if unwatched }}
+   <div class="col-xs-6 col-md-3" id={{@key}} data-toggle="modal" data-target="#posterModal">
+    <a href="#" class="thumbnail">
+    <span class="glyphicon glyphicon-remove delete" id={{@key}}  aria-hidden="true"></span>
+   <img src= "http://img.omdbapi.com/?i={{ id }}&apikey=7c212437">
+   </a>
+   </div>
+   
+   <div><button class="btn btn-default watched" type="button" id="{{@key}}">Watched</button></div>
+   
+	
+	{{/if}}
+    
+{{/each}}
+   
+     
+     
+
+
