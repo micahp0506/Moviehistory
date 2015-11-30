@@ -33,7 +33,8 @@ return {
 				poster: newMovieObject["Poster"],
 				plot: newMovieObject["Plot"],
 				id: newMovieObject["imdbID"],
-				unwatched: "true"
+				unwatched: "true",
+				rating: 1
 				
 				
 			};

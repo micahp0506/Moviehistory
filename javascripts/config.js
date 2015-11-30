@@ -18,8 +18,8 @@ require.config({
   }
 });
 require(
-  ["dependencies", "splashview", "findMovie", "authentication", "newMovies", "deleteMovie","addWatched", "watchedView", "allView", "unwatchedView", "modalView"], 
-  function(_$_,  splashview, findMovie, authentication, newMovies, deleteMovies, addWatched, watchedView, allView, unwatchedView, modalView) {
+  ["dependencies", "splashview", "findMovie", "authentication", "newMovies", "deleteMovie","addWatched", "watchedView", "allView", "unwatchedView", "modalView", "starRating", "favoriteView"], 
+  function(_$_,  splashview, findMovie, authentication, newMovies, deleteMovies, addWatched, watchedView, allView, unwatchedView, modalView, starRating, favoriteView) {
     
     splashview.splashViewDisplay();
 

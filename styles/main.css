@@ -62,5 +62,21 @@ form {
     top:2px;
     left:2px;
 }
+.poster {
+   
+   margin-left: auto;
+   margin-right: auto;
+
+}
+.link {
+margin-bottom: 15px;
+
+}
+
+#content {
+
+margin-top: 10px;
+
+}
 
 /*# sourceMappingURL=main.css.map */
