@@ -14,14 +14,14 @@
     "tests"
   ],
   "dependencies": {
-    "bootstrap": "~3.3.5",
+    "bootstrap": "~3.3.6",
     "firebase": "~2.3.2",
     "handlebars": "~4.0.4",
     "jquery": "~2.1.4",
     "lodash": "~3.10.1",
     "q": "1.0.1",
     "require-handlebars-plugin": "~1.0.0",
-    "requirejs": "~2.1.21"
+    "requirejs": "~2.1.22"
   },
   "resolutions": {
     "q": "~2.0.2"
