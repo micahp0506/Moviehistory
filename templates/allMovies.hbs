@@ -2,25 +2,19 @@
 	
 {{#each this}}
 	{{#if watched}}
-	<div class="col-xs-6 col-md-3 movie-info" id={{@key}} data-toggle="modal" data-target="#posterModal">
+	<div class="col-xs-6 col-md-3">
     <a href="#" class="thumbnail">
     <span class="glyphicon glyphicon-remove delete" id={{@key}}  aria-hidden="true"></span>
-   <img src= "http://img.omdbapi.com/?i={{ id }}&apikey=7c212437"></a>
-  
- 	<div class="rating">
-   
-    <input type="radio"  class="star5" name="rating" value="5"><label for="star5" id={{@key}} class="star5">5 stars</label>
-    <input type="radio"  name="rating" value="4"><label for="star4" id={{@key}} class="star4">4 stars</label>
-    <input type="radio"  name="rating" value="3"><label for="star3" id={{@key}} class="star3">3 stars</label>
-    <input type="radio"  name="rating" value="2"><label for="star2" id={{@key}} class="star2">2 stars</label>
-    <input type="radio"  name="rating" value="1"><label for="star1" id={{@key}} class="star1">1 star</label>
+   <img src= "http://img.omdbapi.com/?i={{ id }}&apikey=7c212437" class= "movie-info" id={{@key}} data-toggle="modal" data-target="#posterModal">
+  <div class="rating">
+      <input type="radio"  class="star5" name="rating" value="5"><label for="star5" id={{@key}} class="star5">5 stars</label>
+      <input type="radio"  name="rating" value="4"><label for="star4" id={{@key}} class="star4">4 stars</label>
+      <input type="radio"  name="rating" value="3"><label for="star3" id={{@key}} class="star3">3 stars</label>
+      <input type="radio"  name="rating" value="2"><label for="star2" id={{@key}} class="star2">2 stars</label>
+      <input type="radio"  name="rating" value="1"><label for="star1" id={{@key}} class="star1">1 star</label>
   </div>
- </div>
-
-  
-        
-
-	</div>
+ </a>
+</div>
 
 
 
@@ -29,16 +23,14 @@
 
 
 	{{else}}
-	<div class="col-xs-6 col-md-3 movie-info" id={{@key}} data-toggle="modal" data-target="#posterModal">
+	<div class="col-xs-6 col-md-3 " >
     <a href="#" class="thumbnail">
 	  <span class="glyphicon glyphicon-remove delete" id={{@key}}  aria-hidden="true"></span>	
-      <img src="http://img.omdbapi.com/?i={{ id }}&apikey=7c212437">
-      
-      
-      <div><button class="btn btn-default watched" type="button" id="{{@key}}">Watched</button></div>
-      
-    </a>
-  </div>
+      <img src="http://img.omdbapi.com/?i={{ id }}&apikey=7c212437" class = "movie-info" id={{@key}} data-toggle="modal" data-target="#posterModal">
+  <div><button class="btn btn-default watched" type="button" id="{{@key}}">Watched</button></div>
+      </a>
+      </div>
+  
   
 
  

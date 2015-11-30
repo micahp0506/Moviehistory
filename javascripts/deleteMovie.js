@@ -5,7 +5,7 @@ define(function (require) {
 
 
 			$("body").on("click", ".delete", function() {
-			ref = new Firebase("https://mbt-movie-history.firebaseio.com/users/")
+			ref = new Firebase("https://mbt-movie-history.firebaseio.com/users/");
 			
 			var user = ref.getAuth();
 			var userID = user.uid;
@@ -13,7 +13,7 @@ define(function (require) {
 			ref = ref.child(userID);
 			var movieKey = $(this).attr("id");
 			ref = ref.child(movieKey);
-			console.log("delte ref", ref)
+			console.log("delte ref", ref);
 			ref.remove();
 
 			var ref = new Firebase("https://mbt-movie-history.firebaseio.com/users/");
@@ -31,8 +31,8 @@ define(function (require) {
 	  			 
 	  			 		$("#content").html(posterTemplate(snapshotObject));
 
-	  			 			})
-			})
+	  			 			});
+			});
 			
   				});
 

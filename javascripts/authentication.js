@@ -37,8 +37,8 @@ define(function(require) {
 	  			 
 	  			 		$("#content").html(posterTemplate(snapshotObject));
 
-	  			 			})
-			})
+	  			 			});
+			});
     		
   				}
 			});

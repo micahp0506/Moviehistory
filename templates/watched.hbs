@@ -2,14 +2,12 @@
 
 	
     {{#if watched }}
-   <div class="col-xs-6 col-md-3 movie-info" id={{@key}} data-toggle="modal" data-target="#posterModal">
-    <a href="#" class="thumbnail">
+   <div class="col-xs-6 col-md-3">
+    <a href="#" class="thumbnail movie-info" id={{@key}} data-toggle="modal" data-target="#posterModal">
     <span class="glyphicon glyphicon-remove delete" id={{@key}}  aria-hidden="true"></span>
    <img src= "http://img.omdbapi.com/?i={{ id }}&apikey=7c212437">
    </a>
- 
- 	<div class="rating">
-   
+  <div class="rating">
     <input type="radio" name="rating" value="5"><label for="star5" id={{@key}} class="star5">5 stars</label>
     <input type="radio" name="rating" value="4"><label for="star4" id={{@key}} class="star4" >4 stars</label>
     <input type="radio"  name="rating" value="3"><label for="star3" id={{@key}} class="star3">3 stars</label>
