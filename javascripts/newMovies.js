@@ -32,11 +32,11 @@ return {
 				title: newMovieObject["Title"],
 				actors: newMovieObject["Actors"],
 				year: newMovieObject["Year"],
-				poster: newMovieObject["Poster"],
+				Poster: newMovieObject["Poster"],
 				plot: newMovieObject["Plot"],
 				id: newMovieObject["imdbID"],
-				unwatched: "true",
-				rating: 1
+				unwatched: "false",
+				rating: 0
 				
 				
 			};
