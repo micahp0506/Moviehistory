@@ -34,17 +34,17 @@ define(function(require) {
 			
 			
 
-			ref.once("value", function(snapshot){
+			// ref.once("value", function(snapshot){
 
-				var snapshotObject = snapshot.val();
-				console.log(snapshotObject);
+			// 	var snapshotObject = snapshot.val();
+			// 	console.log(snapshotObject);
 
-				require(["hbs!../templates/allMovies"], function(posterTemplate) {
+			// 	require(["hbs!../templates/allMovies"], function(posterTemplate) {
 	  			 
-	  			 		$("#content").html(posterTemplate(snapshotObject));
+	  // 			 		$("#content").html(posterTemplate(snapshotObject));
 
-	  			 			});
-			});
+	  // 			 			});
+			// });
     		
   				}
 			});
