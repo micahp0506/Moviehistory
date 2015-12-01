@@ -1,6 +1,7 @@
 define(function (require) {
     var firebase = require("firebase");
     var _ = require("lodash");
+    var gs = require("get-set");
     var newMovieObject;
     
     return {
@@ -9,23 +10,41 @@ define(function (require) {
         findMovie: function () {
             
             $("#find-movie").keyup(function (event) {
-                key = event.which;
-                
-                if ( key === 13) {
-            console.log("find-movie working");
-                //need to get the value of move title
-                var title = $("#find-movie").val();
-                console.log("title", title);
-                //search the api for the title
-                
+                // Declaring variables for later use
+                // Variable for movie search input
+                var title;
+                // Variable for storing Firebase values
+                var firebaseData;
+                // Variable for API movie search
+                var searchMoviesArray = [];
+                // Variable for Firebase movie search
+                var myMoviesArray = [];
+                // Variable for filtered movies
+                var filteredArray = [];
+                // Variable for combining movies
+                var combinedArray = [];
+                // Variable for checking for unique movies
+                var uniqueMovies = [];
+                // Getting uid from get-set
+                var uid = gs.getUid();
 
+                key = event.which;
+                if ( key === 13) {
+                    console.log("find-movie working");
+                    //need to get the value of move title
+                    title = $("#find-movie").val().toLowerCase();
+                    console.log("title", title);
+                    //search the api for the title
+                    // findStuff(title);
+                    //     // Returning from Ajax
+                    //     .then(function(data){
                     var ref = new Firebase("https://moviehistorynew.firebaseio.com/users/");
-                    console.log("ref", ref);
-                    var user = ref.getAuth();
-                    var userID = user.uid;
-                    console.log("userID", userID);
-                    ref = ref.child(userID);
-                    console.log("ref", ref);
+                    // console.log("ref", ref);
+                    // var user = ref.getAuth();
+                    // var userID = user.uid;
+                    // console.log("userID", userID);
+                    // ref = ref.child(userID);
+                    // console.log("ref", ref);
                     
 
                     var firebaseResults = ref.orderByChild("title").equalTo(title);
