@@ -36,6 +36,7 @@ require(
         console.log(userEmail);
         var userPassword = $("#userPassword").val();
         console.log(userPassword);
+        $("div").removeClass("hidden");
         authentication.login(userEmail, userPassword);
       
     });
@@ -45,6 +46,7 @@ require(
         console.log(userEmail);
         var userPassword = $("#userPassword").val();
         console.log(userPassword);
+        $("div").removeClass("hidden")
         authentication.newUser(userEmail, userPassword);
       
     });
